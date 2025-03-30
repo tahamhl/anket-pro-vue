@@ -76,6 +76,6 @@ Bu proje [MIT lisansı](LICENSE) altında lisanslanmıştır.
 
 ## İletişim
 
-Proje Sorumlusu - [@github_username](https://github.com/github_username)
+Proje Sorumlusu - [@tahamhl](https://github.com/tahamhl)
 
-Proje Linki: [https://github.com/username/anket-pro](https://github.com/username/anket-pro)
+Proje Linki: [https://github.com/tahamhl/anket-pro-vue]

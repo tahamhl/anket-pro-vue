@@ -1,0 +1,253 @@
+// Variables
+$primary-color: #4a6bff;
+$secondary-color: #6c63ff;
+$accent-color: #ff6584;
+$text-color: #333;
+$light-text: #666;
+$bg-color: #f8f9fe;
+$light-bg: #fff;
+$dark-bg: #222;
+$border-color: #e0e0e0;
+$success-color: #4caf50;
+$danger-color: #f44336;
+$warning-color: #ff9800;
+$border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+$transition: all 0.3s ease;
+
+// Reset & Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  color: $text-color;
+  background-color: $bg-color;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+// Layout
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: $light-bg;
+  box-shadow: $box-shadow;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .app-title {
+    color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .app-nav {
+    display: flex;
+    gap: 20px;
+    
+    .nav-link {
+      color: $light-text;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 20px;
+      
+      &:hover,
+      &.active-link {
+        color: $primary-color;
+        background-color: rgba($primary-color, 0.1);
+      }
+    }
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 0;
+}
+
+.app-footer {
+  background-color: $light-bg;
+  border-top: 1px solid $border-color;
+  padding: 20px 0;
+  text-align: center;
+  color: $light-text;
+}
+
+// Components
+.card {
+  background-color: $light-bg;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: $text-color;
+  }
+}
+
+.btn {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: $transition;
+  font-weight: 500;
+  
+  &:hover {
+    background-color: darken($primary-color, 5%);
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &.btn-secondary {
+    background-color: $secondary-color;
+    
+    &:hover {
+      background-color: darken($secondary-color, 5%);
+    }
+  }
+  
+  &.btn-accent {
+    background-color: $accent-color;
+    
+    &:hover {
+      background-color: darken($accent-color, 5%);
+    }
+  }
+  
+  &.btn-danger {
+    background-color: $danger-color;
+    
+    &:hover {
+      background-color: darken($danger-color, 5%);
+    }
+  }
+  
+  &.btn-success {
+    background-color: $success-color;
+    
+    &:hover {
+      background-color: darken($success-color, 5%);
+    }
+  }
+  
+  &.btn-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+// Form
+.form-group {
+  margin-bottom: 20px;
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    transition: $transition;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+    }
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .form-error {
+    color: $danger-color;
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  
+  .form-help {
+    color: $light-text;
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .app-header {
+    .container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .app-nav {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+} 

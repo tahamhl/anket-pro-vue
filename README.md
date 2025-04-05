@@ -21,7 +21,7 @@ Modern ve kullanıcı dostu bir anket oluşturma ve yönetme uygulaması. Vue 3 
 
 ```bash
 # Repoyu klonlayın
-git clone https://github.com/username/anket-pro.git
+git clone https://github.com/tahamhl/anket-pro-vue.git
 cd anket-pro
 
 # Bağımlılıkları yükleyin
